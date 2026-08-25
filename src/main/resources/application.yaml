@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: java-lightnet
+
+management:
+  otlp:
+    metrics:
+      export:
+        enabled: false
+
+weather:
+  cache-ttl: 3s
+  circuit-open-duration: 30s
+  providers:
+    weatherstack:
+      enabled: true
+      base-url: http://api.weatherstack.com
+      access-key: ${WEATHERSTACK_ACCESS_KEY:}
+      timeout: 2s
+    openweathermap:
+      enabled: true
+      base-url: http://api.openweathermap.org
+      api-key: ${OPENWEATHERMAP_API_KEY:}
+      timeout: 2s

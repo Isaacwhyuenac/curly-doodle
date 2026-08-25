@@ -1,0 +1,6 @@
+weather:
+  providers:
+    weatherstack:
+      access-key: test-weatherstack-key
+    openweathermap:
+      api-key: test-openweathermap-key
